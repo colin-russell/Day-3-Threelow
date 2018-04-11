@@ -7,11 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Dice.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        
+        BOOL gameOn = true;
+        Dice* dice1 = [[Dice alloc]init];
+        
+        NSLog(@"WELCOME TO THREELOW");
+        
+        for(int i = 0; i <6 ; i++){
+            [dice1 roll];
+            NSLog(@"Roll %d:%ld", i+1, dice1.currentValue);
+        }
+        
     }
     return 0;
 }
